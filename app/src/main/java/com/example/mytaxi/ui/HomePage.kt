@@ -244,8 +244,9 @@ class HomePage : Fragment(R.layout.fragment_home_page), OnMapReadyCallback,
                     builderMap.show()
                 }
             }).withErrorListener {
-                Toast.makeText(requireContext(), "Error", Toast.LENGTH_SHORT).show()
+                Log.d(TAG, "getLocationPermission: Error")
             }.check()
+
 
 
 
