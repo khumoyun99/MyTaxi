@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <fragment
+        android:id="@+id/map"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHeight_percent="1"
+        app:layout_constraintVertical_bias="0"
+        />
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/drawer_btn"
+        android:layout_width="54dp"
+        android:layout_height="64dp"
+        android:src="@drawable/ic_three_line"
+        android:layout_marginTop="12dp"
+        android:layout_marginStart="12dp"
+        android:clickable="true"
+        android:scaleType="centerCrop"
+        android:contentDescription="drawer button"
+        android:foreground="?attr/selectableItemBackground"
+        android:focusable="true"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        tools:targetApi="m" />
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/my_location_btn"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:contentDescription="My location button"
+        android:foreground="?android:selectableItemBackground"
+        android:src="@drawable/ic_btn_my_location_normal"
+        app:layout_constraintBottom_toTopOf="@id/constraint_bottom"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/constraint_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:background="@drawable/home_screen_bottom_shape"
+        android:clickable="true"
+        android:focusable="true"
+        android:gravity="center"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginVertical="16dp"
+            android:layout_marginHorizontal="16dp"
+            app:cardCornerRadius="20dp"
+            app:cardElevation="0dp"
+            app:cardUseCompatPadding="false">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:background="#F8F8F8"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:foreground="?attr/selectableItemBackgroundBorderless"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingStart="20dp"
+                    tools:ignore="RtlSymmetry">
+
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:adjustViewBounds="true"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/ic_light_red_pin" />
+                    <TextView
+                        android:id="@+id/location_address_tv"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:ellipsize="end"
+                        android:gravity="center_vertical"
+                        android:maxLines="2"
+                        android:paddingStart="13dp"
+                        android:paddingEnd="10dp"
+                        android:justificationMode="inter_word"
+                        android:text="5a улица Асадуллы Ходжаева"
+                        android:textColor="#B0B0B0"
+                        android:textSize="14sp"
+                        android:textStyle="normal" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#E9E7E7" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/where_const"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:background="#F0F0F0"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:foreground="?attr/selectableItemBackground"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                     <LinearLayout
+                         android:layout_width="0dp"
+                         android:layout_height="match_parent"
+                         android:layout_marginEnd="2dp"
+                         android:gravity="center_vertical"
+                         android:orientation="horizontal"
+                         android:paddingStart="20dp"
+                         app:layout_constraintBottom_toBottomOf="parent"
+                         app:layout_constraintLeft_toLeftOf="parent"
+                         app:layout_constraintRight_toLeftOf="@id/line_view"
+                         app:layout_constraintTop_toTopOf="parent"
+                         tools:ignore="RtlSymmetry">
+
+                         <ImageView
+                             android:id="@+id/blue_dots_img"
+                             android:layout_width="24dp"
+                             android:layout_height="24dp"
+                             android:adjustViewBounds="true"
+                             android:scaleType="centerCrop"
+                             android:src="@drawable/ic_blue_dost" />
+
+                         <TextView
+                             android:id="@+id/where_tv"
+                             android:layout_width="match_parent"
+                             android:layout_height="match_parent"
+                             android:gravity="center_vertical"
+                             android:paddingStart="13dp"
+                             android:text="Куда?"
+                             android:maxLines="2"
+                             android:justificationMode="inter_word"
+                             android:ellipsize="end"
+                             android:paddingEnd="10dp"
+                             android:textColor="#434343"
+                             android:textSize="14sp"
+                             android:textStyle="normal" />
+
+                     </LinearLayout>
+
+                    <ImageView
+                        android:id="@+id/next_btn"
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_gravity="center_vertical"
+                        android:adjustViewBounds="true"
+                        android:contentDescription="next button"
+                        android:scaleType="center"
+                        android:src="@drawable/ic_next_to"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                     <ImageView
+                         android:id="@+id/line_view"
+                         android:layout_width="wrap_content"
+                         android:layout_height="24dp"
+                         android:src="@drawable/ic_line1"
+                         android:scaleType="center"
+                         android:layout_marginEnd="10dp"
+                         android:layout_toStartOf="@id/next_btn"
+                         app:layout_constraintTop_toTopOf="parent"
+                         app:layout_constraintBottom_toBottomOf="parent"
+                         app:layout_constraintRight_toLeftOf="@id/next_btn"
+                         />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+    </LinearLayout>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

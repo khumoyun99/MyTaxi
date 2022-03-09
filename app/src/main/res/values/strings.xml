@@ -1,0 +1,26 @@
+<resources>
+    <string name="app_name">My Taxi</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="sadriddin_abdurakhimov">Sadriddin Abdurakhimov</string>
+    <string name="rating">Рейтинг:</string>
+    <string name="trips">Поездки:</string>
+    <string name="rating_value">5</string>
+    <string name="general_information">Общие данные</string>
+    <string name="payment_method">Способ оплаты</string>
+    <string name="cash">Наличными</string>
+    <string name="order">Заказ №</string>
+    <string name="Business">Бизнес</string>
+    <string name="rate">Тариф</string>
+    <string name="date_and_time_of_travel">Дата и время поездки</string>
+    <string name="trip_duration">Продолжительность поездки</string>
+    <string name="cost_calculation">Расчёт стоимости</string>
+    <string name="min_sum">Минимальная сумма</string>
+    <string name="Increased_demand">Повышенный спрос</string>
+    <string name="travel_amount">Сумма поездки</string>
+    <string name="price_waiting">Цена ожидании</string>
+    <string name="total_sum">Итого</string>
+    <string name="delete_data">Удалить данные</string>
+    <string name="default_info_title">Marke title</string>
+    <string name="default_info_snippet">Marker snippet</string>
+</resources>

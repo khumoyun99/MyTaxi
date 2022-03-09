@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_nav_graph"
+    app:startDestination="@id/homePage">
+
+    <fragment
+        android:id="@+id/homePage"
+        android:name="com.example.mytaxi.ui.HomePage"
+        android:label="fragment_home_page"
+        tools:layout="@layout/fragment_home_page" >
+        <action
+            android:id="@+id/action_homePage_to_tripsPage"
+            app:destination="@id/tripsPage"
+            />
+    </fragment>
+    <fragment
+        android:id="@+id/tripsPage"
+        android:name="com.example.mytaxi.ui.TripsPage"
+        android:label="fragment_trips_page"
+        tools:layout="@layout/fragment_trips_page" >
+        <action
+            android:id="@+id/action_tripsPage_to_singleTripPage"
+            app:destination="@id/singleTripPage" />
+    </fragment>
+    <fragment
+        android:id="@+id/singleTripPage"
+        android:name="com.example.mytaxi.ui.SingleTripPage"
+        android:label="fragment_single_trip_page"
+        tools:layout="@layout/fragment_single_trip_page" />
+</navigation>

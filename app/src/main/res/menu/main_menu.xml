@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+        <group
+            android:id="@+id/group1"
+            android:checkableBehavior="single">
+            <item
+                android:id="@+id/my_trips"
+                android:icon="@drawable/ic_my_trips"
+                android:title="Мои поездки" />
+        </group>
+
+        <group android:checkableBehavior="single"
+            android:id="@+id/group2">
+            <item
+                android:id="@+id/payment_methods"
+                android:title="Способы оплаты"
+                android:icon="@drawable/ic_payment_methods"
+                />
+        </group>
+
+        <group android:checkableBehavior="single"
+            android:id="@+id/group3">
+            <item
+                android:id="@+id/favorite_addresses"
+                android:icon="@drawable/ic_favorite"
+                android:title="Избранные адреса" />
+        </group>
+</menu>
